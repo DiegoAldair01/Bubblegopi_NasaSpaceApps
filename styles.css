@@ -1,0 +1,30 @@
+/* align planet. */
+
+.element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.element {
+    border-radius: 50px;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px; /* Apply border-radius to the hero content */
+}
+
+.hero-content button {
+    border-radius: 25px; /* Apply a smaller border-radius to the button */
+}
+
+
