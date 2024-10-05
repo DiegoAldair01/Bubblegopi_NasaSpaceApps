@@ -1,0 +1,78 @@
+/* Estilo global */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    color: white;
+    background: #000;
+}
+
+/* Fondo de imagen */
+.hero {
+    height: 100vh;
+    background: url('tu-imagen-de-fondo.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero .content {
+    color: white;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+/* Botón Explore */
+#explore-btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+#explore-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Menú hamburguesa */
+.menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.menu-icon {
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+    display: block;
+}
+
+.menu-items {
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+.menu-items li {
+    margin: 10px 0;
+}
+
+.menu-items a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Estilo para cuando se activa el menú */
+#menu-toggle:checked + .menu-icon + .menu-items {
+    display: block;
+}
