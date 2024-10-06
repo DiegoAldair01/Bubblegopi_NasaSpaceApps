@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario sobre HD 100546</title>
+    <link rel="stylesheet" href="formulario2.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="myForm">
+            <h1>Cuestionario sobre HD 100546</h1>
+            <!-- Pregunta 1 -->
+            <div class="question">
+                <h3>Pregunta 1: ¿Recuerdas de qué color es el planeta?</h3>
+                <div class="color-selector">
+                    <label>
+                        <input type="radio" name="pregunta1" value="mar">
+                        <img src="images/exo10.jpeg" alt="pexo10" class="option-img">
+                    </label>
+                    <label>
+                        <input type="radio" name="pregunta1" value="montaña">
+                        <img src="images/exo11.jpeg" alt="p12" class="option-img">
+                    </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="question">
+                <h3>Pregunta 2: ¿A cuántos días Tierra equivale un año en este planeta?</h3>
+                <label>
+                    <input type="radio" name="pregunta2" value="100">
+                    <span>100 días</span>
+                </label>
+                <label>
+                    <input type="radio" name="pregunta2" value="200">
+                    <span>200 días</span>
+                </label>
+                <label>
+                    <input type="radio" name="pregunta2" value="300">
+                    <span>300 días</span>
+                </label>
+                <label>
+                    <input type="radio" name="pregunta2" value="400">
+                    <span>400 días</span>
+                </label>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="question">
+                <h3>Pregunta 3: ¿Cuántas veces es más grande en comparación con la Tierra?</h3>
+                <label>
+                    <input type="radio" name="pregunta3" value="2">
+                    <span>2 veces</span>
+                </label>
+                <label>
+                    <input type="radio" name="pregunta3" value="5">
+                    <span>5 veces</span>
+                </label>
+                <label>
+                    <input type="radio" name="pregunta3" value="10">
+                    <span>10 veces</span>
+                </label>
+                <label>
+                    <input type="radio" name="pregunta3" value="15">
+                    <span>15 veces</span>
+                </label>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="question">
+                <h3>Pregunta 4: ¿Escribe tu propia historia?</h3>
+                <textarea name="pregunta4" rows="5" placeholder="Escribe tu historia aquí..." required></textarea>
+            </div>
+
+            <!-- Botón de envío -->
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        // Función para cambiar el color del círculo
+        function changeColor(color) {
+            const circle = document.querySelector('.circle.selected');
+            if (circle) {
+                circle.classList.remove('selected');
+            }
+            const newCircle = Array.from(document.querySelectorAll('.circle')).find(circle => circle.style.backgroundColor === color);
+            newCircle.classList.add('selected');
+        }
+
+    </script>
+       <script>
+        // Escucha el evento submit del formulario
+        document.getElementById("myForm").addEventListener("submit", function(event){
+            event.preventDefault(); // Evita el envío predeterminado del formulario
+
+            // Ruta de la imagen que deseas descargar
+            const imageUrl = 'images/felicidades.jpeg'; // Reemplaza con la ruta de tu imagen
+
+            // Crea un enlace de descarga
+            const link = document.createElement('a');
+            link.href = imageUrl; // Asigna la URL de la imagen
+            link.download = imageUrl.split('images/felicidades.jpeg').pop(); // Establece el nombre del archivo para descargar
+            document.body.appendChild(link); // Añade el enlace al cuerpo del documento
+            link.click(); // Simula un clic en el enlace para iniciar la descarga
+            document.body.removeChild(link); // Elimina el enlace del documento
+        });
+    </script>
+
+</body>
+</html>
