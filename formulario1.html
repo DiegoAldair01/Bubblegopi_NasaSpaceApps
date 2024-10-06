@@ -8,11 +8,11 @@
 </head>
 <body>
     <div class="form-container">
-        <h1>Formulario de Selección</h1>
-        <form action="#" method="post">
+        <h1>Test Principal</h1>
+        <form id="myForm">
             <!-- Pregunta 1 -->
             <div class="question">
-                <h3>Pregunta 1: ¿Que imagen te representa?</h3>
+                <h3>Pregunta 1: ¿Qué imagen te representa?</h3>
                 <label>
                     <input type="radio" name="pregunta1" value="mar">
                     <img src="images/p11.jpeg" alt="p11" class="option-img">
@@ -61,9 +61,20 @@
                     <img src="images/p42.jpeg" alt="p42" class="option-img">
                 </label>
             </div>
-
+            
+            <!-- Botón de envío -->
             <button type="submit">Enviar</button>
         </form>
     </div>
+
+    <script>
+        // Escucha el evento submit del formulario
+        document.getElementById("myForm").addEventListener("submit", function(event){
+            event.preventDefault(); // Evita el envío predeterminado del formulario
+            window.location.href = "exoplanets.html"; // Redirige a la página 
+        });
+    </script>
 </body>
 </html>
+
+
