@@ -1,40 +1,50 @@
-/* General styles for the sections */
-section {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f8f9fa; /* Light gray background */
-    margin-bottom: 20px;
-}
-
-.hero-content {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-.expand {
-    position: absolute;
-    bottom: 10px;
-    left: 20px;
-    background-color: #fff3e0; /* Light orange */
-}
-
-.collapse {
-    position: absolute;
-    bottom: 10px;
-    left: 20px;
-    background-color: #fff3e0; /* Light orange */
-}
-
-/* Optional: Different background colors for each section */
+/* Estilos generales para la sección */
 .home {
-    background-color: #e0f7fa; /* Light blue */
+    height: 90vh;
+    background-color: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* Estilos para los botones */
+.btn {
+    width: 150px;
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos para el botón "Home" en la parte superior */
+.btn-primary {
+    align-self: flex-start;
+}
+
+/* Contenedor para los botones inferiores */
+.bottom-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Opcional: Cambiar el color de fondo de los botones al pasar el ratón */
+.btn:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Estilo minimalista */
+body, button {
+    font-family: 'Arial', sans-serif;
 }
 
 
-.hero {
-    background-color: #e8f5e9; /* Light green */
-}
+
+
