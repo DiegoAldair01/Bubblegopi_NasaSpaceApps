@@ -89,11 +89,24 @@
             newCircle.classList.add('selected');
         }
 
+    </script>
+       <script>
         // Escucha el evento submit del formulario
-        document.getElementById("myForm").addEventListener("submit", function(event) {
+        document.getElementById("myForm").addEventListener("submit", function(event){
             event.preventDefault(); // Evita el envío predeterminado del formulario
-            window.location.href = "exoplanets.html"; // Redirige a la página 
+
+            // Ruta de la imagen que deseas descargar
+            const imageUrl = 'images/felicidades.jpeg'; // Reemplaza con la ruta de tu imagen
+
+            // Crea un enlace de descarga
+            const link = document.createElement('a');
+            link.href = imageUrl; // Asigna la URL de la imagen
+            link.download = imageUrl.split('images/felicidades.jpeg').pop(); // Establece el nombre del archivo para descargar
+            document.body.appendChild(link); // Añade el enlace al cuerpo del documento
+            link.click(); // Simula un clic en el enlace para iniciar la descarga
+            document.body.removeChild(link); // Elimina el enlace del documento
         });
     </script>
+
 </body>
 </html>
